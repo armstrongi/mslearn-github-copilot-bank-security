@@ -80,7 +80,7 @@
                     }
                 }
 
-                Console.WriteLine($"Account: {account.AccountNumber}, Balance: {account.Balance.ToString("C")}, Account Holder: {account.AccountHolderName}, Account Type: {account.AccountType}");
+                Console.WriteLine($"Account: {MaskAccountNumber(account.AccountNumber)}, Balance: {account.Balance.ToString("C")}, Account Holder: {account.AccountHolderName}, Account Type: {account.AccountType}");
             }));
 
             await Task.WhenAll(tasks);
@@ -112,7 +112,7 @@
                     }
                 }
 
-                Console.WriteLine($"Account: {account.AccountNumber}, Balance: {account.Balance.ToString("C")}, Account Holder: {account.AccountHolderName}, Account Type: {account.AccountType}");
+                Console.WriteLine($"Account: {MaskAccountNumber(account.AccountNumber)}, Balance: {account.Balance.ToString("C")}, Account Holder: {account.AccountHolderName}, Account Type: {account.AccountType}");
             }));
 
             await Task.WhenAll(tasks);
@@ -157,6 +157,15 @@
             }
 
             return randomDate;
+        }
+
+        static string MaskAccountNumber(string accountNumber)
+        {
+            if (accountNumber.Length < 4)
+            {
+                return accountNumber;
+            }
+            return new string('*', accountNumber.Length - 4) + accountNumber[^4..];
         }
     }
 }
