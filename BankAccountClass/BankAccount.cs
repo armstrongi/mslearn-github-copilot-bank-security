@@ -92,6 +92,17 @@ namespace BankAccountApp
         }
     }
 
+    public class InvalidTransferAccountException : Exception
+    {
+        public BankAccount ToAccount { get; }
+
+        public InvalidTransferAccountException(BankAccount toAccount)
+            : base($"Invalid transfer account, same as from account: {toAccount}.")
+        {
+            ToAccount = toAccount;
+        }
+    }
+
     public class InvalidCreditAmountException : Exception
     {
         public double CreditAmount { get; }
@@ -134,7 +145,7 @@ namespace BankAccountApp
 
         public BankAccount(string accountNumber, double initialBalance, string accountHolderName, string accountType, DateTime dateOpened)
         {
-            if (accountNumber.Length != 10)
+            if (string.IsNullOrWhiteSpace(accountNumber) || accountNumber.Length != 10)
             {
                 throw new InvalidAccountNumberException(accountNumber);
             }
@@ -144,17 +155,15 @@ namespace BankAccountApp
                 throw new InvalidInitialBalanceException(initialBalance);
             }
 
-            if (accountHolderName.Length < 2)
+            if (string.IsNullOrWhiteSpace(accountHolderName) || accountHolderName.Length < 2)
             {
                 throw new InvalidAccountHolderNameException(accountHolderName);
             }
-
-            /* the enum will enforce the valid values
-            if (accountType != "Savings" && accountType != "Checking" && accountType != "Money Market" && accountType != "Certificate of Deposit" && accountType != "Retirement")
+            
+            if (!Enum.TryParse(accountType, out AccountTypes parsedAccountType))
             {
                 throw new InvalidAccountTypeException(accountType);
             }
-            */     
 
             if (dateOpened > DateTime.Now)
             {
@@ -204,6 +213,7 @@ namespace BankAccountApp
         public void Transfer(BankAccount toAccount, double amount)
         {
             ValidateTransferAmount(amount);
+            ValidateTransferAccount(toAccount);
             ValidateTransferLimitForDifferentOwners(toAccount, amount);
 
             if (Balance >= amount)
@@ -233,6 +243,13 @@ namespace BankAccountApp
             }
         }
 
+        private void ValidateTransferAccount(BankAccount toAccount)
+        {
+            if (this == toAccount)
+            {
+                throw new InvalidTransferAccountException(toAccount);
+            }
+        }
 
         /* 
         

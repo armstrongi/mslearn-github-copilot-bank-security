@@ -56,7 +56,7 @@
 
         static async Task SimulateTransactionsAsync(List<BankAccount> accounts, int numberOfTransactions, double minTransactionAmount, double maxTransactionAmount)
         {
-            var tasks = accounts.Select(async account =>
+            var tasks = accounts.Select(async account => await Task.Run(() =>
             {
                 for (int i = 0; i < numberOfTransactions; i++)
                 {
@@ -81,14 +81,14 @@
                 }
 
                 Console.WriteLine($"Account: {account.AccountNumber}, Balance: {account.Balance.ToString("C")}, Account Holder: {account.AccountHolderName}, Account Type: {account.AccountType}");
-            });
+            }));
 
             await Task.WhenAll(tasks);
         }
 
         static async Task SimulateTransfersAsync(List<BankAccount> accounts, int numberOfTransactions, double minTransactionAmount, double maxTransactionAmount)
         {
-            var tasks = accounts.Select(async account =>
+            var tasks = accounts.Select(async account => await Task.Run(() =>
             {
                 for (int i = 0; i < numberOfTransactions; i++)
                 {
@@ -113,7 +113,7 @@
                 }
 
                 Console.WriteLine($"Account: {account.AccountNumber}, Balance: {account.Balance.ToString("C")}, Account Holder: {account.AccountHolderName}, Account Type: {account.AccountType}");
-            });
+            }));
 
             await Task.WhenAll(tasks);
         }
