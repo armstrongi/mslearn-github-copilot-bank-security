@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "9d5yDjmiLBk=",
+  "dgSpecHash": "Kt/voLMvflM=",
   "success": true,
-  "projectFilePath": "/workspaces/mslearn-github-copilot-bank-security/BankAccountClass/BankAccount.csproj",
+  "projectFilePath": "/home/vscode/mslearn-github-copilot-bank-security/BankAccountClass/BankAccount.csproj",
   "expectedPackageFiles": [],
   "logs": []
 }

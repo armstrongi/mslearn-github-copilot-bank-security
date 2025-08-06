@@ -4255,19 +4255,19 @@
     ]
   },
   "packageFolders": {
-    "/home/codespace/.nuget/packages/": {}
+    "/home/vscode/.nuget/packages/": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "/workspaces/mslearn-github-copilot-bank-security/BankAccount.UnitTests/BankAccount.UnitTests.csproj",
+      "projectUniqueName": "/home/vscode/mslearn-github-copilot-bank-security/BankAccount.UnitTests/BankAccount.UnitTests.csproj",
       "projectName": "BankAccount.UnitTests",
-      "projectPath": "/workspaces/mslearn-github-copilot-bank-security/BankAccount.UnitTests/BankAccount.UnitTests.csproj",
-      "packagesPath": "/home/codespace/.nuget/packages/",
-      "outputPath": "/workspaces/mslearn-github-copilot-bank-security/BankAccount.UnitTests/obj/",
+      "projectPath": "/home/vscode/mslearn-github-copilot-bank-security/BankAccount.UnitTests/BankAccount.UnitTests.csproj",
+      "packagesPath": "/home/vscode/.nuget/packages/",
+      "outputPath": "/home/vscode/mslearn-github-copilot-bank-security/BankAccount.UnitTests/obj/",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "/home/codespace/.nuget/NuGet/NuGet.Config"
+        "/home/vscode/.nuget/NuGet/NuGet.Config"
       ],
       "originalTargetFrameworks": [
         "net8.0"
@@ -4279,8 +4279,8 @@
         "net8.0": {
           "targetAlias": "net8.0",
           "projectReferences": {
-            "/workspaces/mslearn-github-copilot-bank-security/BankAccountClass/BankAccount.csproj": {
-              "projectPath": "/workspaces/mslearn-github-copilot-bank-security/BankAccountClass/BankAccount.csproj"
+            "/home/vscode/mslearn-github-copilot-bank-security/BankAccountClass/BankAccount.csproj": {
+              "projectPath": "/home/vscode/mslearn-github-copilot-bank-security/BankAccountClass/BankAccount.csproj"
             }
           }
         }
@@ -4294,7 +4294,8 @@
         "enableAudit": "true",
         "auditLevel": "low",
         "auditMode": "direct"
-      }
+      },
+      "SdkAnalysisLevel": "9.0.300"
     },
     "frameworks": {
       "net8.0": {
@@ -4333,7 +4334,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "/usr/share/dotnet/sdk/8.0.404/PortableRuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "/usr/share/dotnet/sdk/9.0.303/PortableRuntimeIdentifierGraph.json"
       }
     }
   }

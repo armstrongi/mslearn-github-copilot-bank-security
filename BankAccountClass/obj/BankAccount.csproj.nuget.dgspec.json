@@ -1,20 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "/workspaces/mslearn-github-copilot-bank-security/BankAccountClass/BankAccount.csproj": {}
+    "/home/vscode/mslearn-github-copilot-bank-security/BankAccountClass/BankAccount.csproj": {}
   },
   "projects": {
-    "/workspaces/mslearn-github-copilot-bank-security/BankAccountClass/BankAccount.csproj": {
+    "/home/vscode/mslearn-github-copilot-bank-security/BankAccountClass/BankAccount.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "/workspaces/mslearn-github-copilot-bank-security/BankAccountClass/BankAccount.csproj",
+        "projectUniqueName": "/home/vscode/mslearn-github-copilot-bank-security/BankAccountClass/BankAccount.csproj",
         "projectName": "BankAccount",
-        "projectPath": "/workspaces/mslearn-github-copilot-bank-security/BankAccountClass/BankAccount.csproj",
-        "packagesPath": "/home/codespace/.nuget/packages/",
-        "outputPath": "/workspaces/mslearn-github-copilot-bank-security/BankAccountClass/obj/",
+        "projectPath": "/home/vscode/mslearn-github-copilot-bank-security/BankAccountClass/BankAccount.csproj",
+        "packagesPath": "/home/vscode/.nuget/packages/",
+        "outputPath": "/home/vscode/mslearn-github-copilot-bank-security/BankAccountClass/obj/",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "/home/codespace/.nuget/NuGet/NuGet.Config"
+          "/home/vscode/.nuget/NuGet/NuGet.Config"
         ],
         "originalTargetFrameworks": [
           "net8.0"
@@ -37,7 +37,8 @@
           "enableAudit": "true",
           "auditLevel": "low",
           "auditMode": "direct"
-        }
+        },
+        "SdkAnalysisLevel": "9.0.300"
       },
       "frameworks": {
         "net8.0": {
@@ -58,7 +59,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "/usr/share/dotnet/sdk/8.0.404/PortableRuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "/usr/share/dotnet/sdk/9.0.303/PortableRuntimeIdentifierGraph.json"
         }
       }
     }

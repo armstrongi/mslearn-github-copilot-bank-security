@@ -50,3 +50,10 @@ modules.order
 Module.symvers
 Mkfile.old
 dkms.conf
+
+# Bin and debug files
+BankAccount.UnitTests/bin/
+BankAccount.UnitTests/obj/Debug/
+
+BankAccountClass/bin/
+BankAccountClass/obj/Debug/
