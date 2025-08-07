@@ -52,8 +52,5 @@ Mkfile.old
 dkms.conf
 
 # Bin and debug files
-BankAccount.UnitTests/bin/
-BankAccount.UnitTests/obj/
-
-BankAccountClass/bin/
-BankAccountClass/obj/
+bin/
+obj/
