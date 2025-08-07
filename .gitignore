@@ -53,7 +53,7 @@ dkms.conf
 
 # Bin and debug files
 BankAccount.UnitTests/bin/
-BankAccount.UnitTests/obj/Debug/
+BankAccount.UnitTests/obj/
 
 BankAccountClass/bin/
-BankAccountClass/obj/Debug/
+BankAccountClass/obj/
